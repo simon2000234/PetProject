@@ -1,4 +1,6 @@
 ﻿using System;
+using Core.ApplicationService.Impl;
+using Infrastructure.Data.Repository;
 
 namespace Console4CoolKids
 {
@@ -6,7 +8,8 @@ namespace Console4CoolKids
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Printer printer = new Printer(new PetService(new PetRepository()));
+            printer.run();
         }
     }
 }

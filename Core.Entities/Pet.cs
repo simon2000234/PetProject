@@ -13,5 +13,11 @@ namespace Core.Entities
         public string PreviousOwner { get; set; }
         public double Price { get; set; }
 
+        public override string ToString()
+        {
+            return "The id is " + ID + " The name is " + Name + " it is a " + Type + " it was born on " + BirthDate.Date +
+                   " it was last sold on " + SoldDate.Date + " its color is " + Color + " its previous owner was " +
+                   PreviousOwner + " and it cost " + Price;
+        }
     }
 }
